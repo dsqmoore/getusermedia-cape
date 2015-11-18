@@ -1,0 +1,13 @@
+{
+  "name": "get-user-media-cape demo",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "permissions": [
+    "videoCapture"
+  ]
+}

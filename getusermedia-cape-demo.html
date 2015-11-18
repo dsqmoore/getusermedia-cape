@@ -1,0 +1,98 @@
+<link rel="import"
+      href="/bower_components/polymer/polymer.html">
+
+<link rel="import"
+      href="/bower_components/layout/layout.html">
+
+<link rel="import"
+      href="getusermedia-cape.html">
+
+<dom-module id="getusermedia-cape-demo">
+  
+  <template>
+    
+    <div class="vertical layout fit">
+      
+      <video id="video" class="flex" style="image-rendering: pixelated;" autoplay></video>
+      
+      <div class="horizontal layout">
+        
+        <div class="vertical layout flex center">
+          
+          <h2>Control</h2>
+          
+          <button on-tap="activateStream">Activate</button>
+          
+          <button on-tap="deactivateStream">Deactivate</button>
+          
+          <input type="checkbox" on-tap="setAutoReconfigure">Auto Reconfigure</input>
+          
+        </div>
+        
+        <div class="vertical layout flex center">
+          
+          <h2>Resolution</h2>
+          
+          <select on-change="setResolution">
+            
+            <option value="FHD">FHD</option>
+            
+            <option value="HD" selected>HD</option>
+            
+            <option value="SD">SD</option>
+            
+            <option value="VGA">VGA</option>
+            
+            <option value="QVGA">QVGA</option>
+            
+          </select>
+          
+        </div>
+        
+        <div class="vertical layout flex center">
+          
+          <h2>Aspect Ratio</h2>
+          
+          <select on-change="setAspectRatio">
+            
+            <option value="16:9" selected>16:9</option>
+            
+            <option value="3:2">3:2</option>
+            
+            <option value="4:3">4:3</option>
+            
+            <option value="1:1">1:1</option>
+            
+          </select>
+          
+        </div>
+        
+        <div class="vertical layout flex center">
+          
+          <h2>Source</h2>
+          
+          <select on-change="setSource">
+            
+            <template is="dom-repeat" items="{{sources}}">
+              
+              <option value="{{item.id}}">{{item.label}}</option>
+              
+            </template>
+            
+          </select>
+          
+        </div>
+        
+      </div>
+      
+      <div style="height: 32px;"></div>
+        
+    </div>
+    
+  </template>
+  
+  <script src="getusermedia-cape-demo.js"></script>
+  
+</dom-module>
+
+<getusermedia-cape-demo></getusermedia-cape-demo>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "polymer": "Polymer/polymer#latest",
+    "layout": "polymer/layout#master"
+  }
+}
