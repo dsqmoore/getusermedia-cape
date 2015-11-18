@@ -1,6 +1,6 @@
 Polymer({
   
-  is: "getusermedia-cape-demo",
+  is: "getusermedia-cape-video-demo",
   
   behaviors: [GetUserMediaBehaviors.Video],
   

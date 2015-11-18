@@ -1,0 +1,60 @@
+<link rel="import"
+      href="/bower_components/polymer/polymer.html">
+
+<link rel="import"
+      href="/bower_components/layout/layout.html">
+
+<link rel="import"
+      href="getusermedia-cape.html">
+
+<dom-module id="getusermedia-cape-audio-demo">
+  
+  <template>
+    
+    <div class="vertical layout fit">
+      
+      <audio id="audio" class="flex" autoplay controls></audio>
+      
+      <div class="horizontal layout">
+        
+        <div class="vertical layout flex center">
+          
+          <h2>Control</h2>
+          
+          <button on-tap="activateStream">Activate</button>
+          
+          <button on-tap="deactivateStream">Deactivate</button>
+          
+          <input type="checkbox" on-tap="setAutoReconfigure">Auto Reconfigure</input>
+          
+        </div>
+        
+        <div class="vertical layout flex center">
+          
+          <h2>Source</h2>
+          
+          <select on-change="setSource">
+            
+            <template is="dom-repeat" items="{{sources}}">
+              
+              <option value="{{item.id}}">{{item.label}}</option>
+              
+            </template>
+            
+          </select>
+          
+        </div>
+        
+      </div>
+      
+      <div style="height: 32px;"></div>
+        
+    </div>
+    
+  </template>
+  
+  <script src="getusermedia-cape-audio-demo.js"></script>
+  
+</dom-module>
+
+<getusermedia-cape-audio-demo></getusermedia-cape-audio-demo>
